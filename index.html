@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Climzo</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-sky-900 to-slate-900 flex items-center justify-center px-4">
+
+    <form
+        class="w-full max-w-md bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl p-6 sm:p-8 shadow-xl text-white space-y-6">
+        
+        <!-- Heading -->
+        <div class="text-center space-y-1">
+            <h2 class="text-2xl font-semibold">Weather Forecast</h2>
+            <p class="text-sm text-white/70">Check current temperature</p>
+        </div>
+
+        <!-- Input section -->
+        <div class="space-y-2">
+            <label for="input-city" class="text-sm text-white/80">
+                Enter city name
+            </label>
+
+            <input type="text" name="city" id="input-city" placeholder="Eg: Dhaka, London" value="Dhaka"
+                class="w-full rounded-lg bg-white/10 border border-white/20 px-4 py-2.5 text-white placeholder:text-white/40 outline-none focus:ring-2 focus:ring-sky-400" />
+        </div>
+
+        <button id="submit"
+            class="w-full bg-sky-500 hover:bg-sky-600 transition rounded-lg py-2.5 font-medium text-white">
+            Search
+        </button>
+
+
+        <!-- Location -->
+        <div class="pt-4 border-t border-white/10 space-y-1 text-center">
+            <p class="city text-lg font-semibold">---</p>
+            <p class="country text-sm text-white/70">---</p>
+        </div>
+
+        <!-- Output Section -->
+        <div class="grid grid-cols-2 gap-4 pt-2">
+
+            <!-- Celcius Weather -->
+            <div class="bg-white/10 rounded-xl p-4 text-center">
+                <p class="text-sm text-white/70 mb-1">Celsius</p>
+                <h1 class="weather-c text-2xl font-bold">---</h1>
+            </div>
+            <!-- Farenheit Weather -->
+            <div class="bg-white/10 rounded-xl p-4 text-center">
+                <p class="text-sm text-white/70 mb-1">Fahrenheit</p>
+                <h1 class="weather-f text-2xl font-bold">---</h1>
+            </div>
+            
+            <!-- Condition -->
+            <div class="bg-white/10 rounded-xl p-4 flex flex-col items-center text-center">
+                <p class="text text-sm text-white/70 mb-1">---</p>
+                <img src="" alt="" class="condition">
+            </div>
+
+            <!-- Feels Like -->
+            <div class="bg-white/10 rounded-xl p-4 flex flex-col items-center text-center">
+                <p class="text-sm text-white/70 mb-1">Feels Like</p>
+                <h1 class="fl text-2xl font-bold">---</h1>
+            </div>
+
+            <div class="bg-white/10 rounded-xl p-4 text-center">
+                <p class="text-sm text-white/70 mb-1">Sunrise</p>
+                <h1 class="sunrise text-2xl font-bold">---</h1>
+            </div>
+               
+            <div class="bg-white/10 rounded-xl p-4 text-center">
+                <p class=" text-sm text-white/70 mb-1">Sunset</p>
+                <h1 class="sunset text-2xl font-bold">---</h1>
+            </div>
+
+
+
+            
+        </div>
+
+    </form>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
